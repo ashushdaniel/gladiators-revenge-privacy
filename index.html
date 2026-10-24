@@ -23,7 +23,7 @@ p:first-of-type{color:var(--muted)}
 <li>Your save and your settings stay on your device. We never receive them.</li>
 <li>The game has no accounts and never asks for your name, email or phone number.</li>
 <li>Play data goes to Unity Analytics <strong>only if you say yes</strong> to the "Share data?" question. You can change your answer in the settings at any time.</li>
-<li>On Android, the free game shows an ad between chapters, through Unity's LevelPlay. In the European Economic Area, the UK and Switzerland, Google's consent form first asks whether ads may use your data. Owners of the Champions Pack see no ads.</li>
+<li>On Android, the free game shows an ad between chapters, through Unity's LevelPlay. In the European Economic Area, the UK and Switzerland, Google's consent form first asks whether ads may use your data. To know whether the form is needed where you are, the free game contacts Google at every start. Owners of the Champions Pack see no ads.</li>
 <li>On Android, Google Play takes care of the Champions Pack payment. We never see your payment details.</li>
 <li>On Steam, Valve takes care of achievements, and the game shows your Steam name on your gladiator. That name stays on your computer.</li>
 </ul>
@@ -31,7 +31,7 @@ p:first-of-type{color:var(--muted)}
 <p>The game keeps these on your phone or computer, and never sends them to us:</p>
 <ul>
 <li>the save file of your current run;</li>
-<li>your settings (language, volume, auto save, touch layout, key bindings, map hints, tutorial, easy mode);</li>
+<li>your settings (language, volume, auto save, touch layout, key bindings, map hints, tutorial);</li>
 <li>the characters, challenge levels and achievements you have unlocked;</li>
 <li>whether you own the Champions Pack (Android) and whether Google has confirmed the purchase;</li>
 <li>your answers to the "Share data?" question and to Google's ads consent form;</li>
@@ -42,7 +42,7 @@ p:first-of-type{color:var(--muted)}
 <h2>2. Play data (Unity Analytics): only with your consent</h2>
 <p>The first time you start the game it asks "Share data?". Only if you answer yes does the game start Unity Analytics, a service of Unity Technologies, and send it:</p>
 <ul>
-<li><strong>What happens in the game</strong>: a run starts (which gladiator, challenge level, whether you skipped the tutorial); a fight or arena ends (chapter, which fight, won or lost, your level, how long it took, lives left); a run ends (won or died, chapter, level); you pick or buy an item (talisman, skill, equipment or potion, its name, where it came from, its price in game gold); you open the Champions Pack window; an ad is shown (Android); you buy the Champions Pack (Android, sent by Unity's purchase system).</li>
+<li><strong>What happens in the game</strong>: a run starts (which gladiator, challenge level, whether you skipped the tutorial); a fight or arena ends (chapter, which fight, won or lost, your level, how long it took, lives left); a run ends (won or died, chapter, level); you pick or buy an item (talisman, skill, equipment or potion, its name, where it came from, its price in game gold); you open the Champions Pack window; an ad is shown (Android: which ad network showed it, and what it earned); you buy the Champions Pack (Android, sent by Unity's purchase system).</li>
 <li><strong>What Unity's SDK adds by itself</strong>: a random installation ID that the SDK creates on your device; the start and end of each play session and a signal every minute while you play; the game's version; your device's model, operating system, processor, graphics chip, memory, screen size and resolution, battery level, language and country setting. Unity also receives your IP address, which it uses to work out your country.</li>
 </ul>
 <p>We use this to see which fights are too hard, which items players pick and where they stop, so we can balance and improve the game. We do not use it for advertising and do not try to find out who you are. The installation ID is not linked to your name, email, Google account or Steam account.</p>
@@ -50,12 +50,12 @@ p:first-of-type{color:var(--muted)}
 <p><strong>Changing your mind</strong>: switch "Share data?" off in the game's settings. Nothing more is sent from then on. Because the game never knows who you are, we cannot pick out and delete the play data already sent; Unity deletes the raw events after 13 months.</p>
 <h2>3. Ads (Android only)</h2>
 <p>The free Android game shows a full-screen ad when you sail to the next chapter. When the ad closes you get a small in-game reward, whether you watched it to the end or not.</p>
-<p>The ads come through <strong>Unity LevelPlay</strong>, Unity's ad mediation service, from the ad networks <strong>Unity Ads</strong> and <strong>ironSource Ads</strong> (both run by Unity Technologies). To show ads, count and measure them, limit how often you see the same one, and prevent fraud, these networks collect data from your device, such as your device's advertising ID and other device identifiers, your IP address and approximate location (from the IP address), your device's type and settings, and how you interact with the ads. They use this data under their own privacy policies, as independent companies: Unity (Unity Ads, ironSource Ads, LevelPlay): <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">https://unity.com/legal/game-player-and-app-user-privacy-policy</a></p>
-<p><strong>Consent in the EEA, the UK and Switzerland</strong>: before the first ad, Google's consent form (Google's User Messaging Platform) asks whether the ad networks may use your data for personalised ads. Your answer is kept on your device and passed to the ad networks. If you say no, you see ads that are not personalised. You can change your answer at any time with the "Ad privacy" button in the game's settings. Google's policy for the form: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
+<p>The ads come through <strong>Unity LevelPlay</strong>, Unity's ad mediation service, from the ad networks <strong>Unity Ads</strong> and <strong>ironSource Ads</strong> (both run by Unity Technologies). To show ads, count and measure them, limit how often you see the same one, and prevent fraud, these networks collect data from your device, such as your device's advertising ID and other device identifiers, your IP address and approximate location (from the IP address), your device's type and settings, whether you have made in-app purchases, and how you interact with the ads. Even for ads that are not personalised, they use device data to show and count ads, limit how often you see the same one, prevent fraud and measure results, and they may share device identifiers with measurement (attribution) companies that tell advertisers which ads led to an install. They use this data under their own privacy policies, as independent companies: Unity (Unity Ads, ironSource Ads, LevelPlay): <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">https://unity.com/legal/game-player-and-app-user-privacy-policy</a></p>
+<p><strong>Consent in the EEA, the UK and Switzerland</strong>: before the first ad, Google's consent form (Google's User Messaging Platform) asks whether the ad networks may use your data for personalised ads. Your answer is kept on your device and passed to the ad networks. To know whether the form is needed where you are, the free game asks Google's servers at every start, in every country; this sends Google your IP address, the game's name and basic information about your device (model, screen size, language). If you say no, you see ads that are not personalised. You can change your answer at any time with the "Ad privacy" button in the game's settings. Google's policy for the form: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
 <p>Your other choices:</p>
 <ul>
 <li><strong>Your device's ad settings</strong>: you can reset or delete your advertising ID and turn off personalised ads in Android's settings (for example Settings &gt; Privacy &gt; Ads, depending on the phone).</li>
-<li><strong>The Champions Pack</strong> removes all ads; the game then does not start the ads at all.</li>
+<li><strong>The Champions Pack</strong> removes all ads; the game then starts neither the ad networks nor Google's consent check. Right after the game is installed again, it may start them once, before Google Play has confirmed that you own the pack.</li>
 </ul>
 <p>The Steam version has no ads.</p>
 <h2>4. The Champions Pack (Android only)</h2>
@@ -86,7 +86,7 @@ p:first-of-type{color:var(--muted)}
 <h2>9. Legal bases (EU and UK)</h2>
 <ul>
 <li>Play data: your consent, which you can withdraw in the settings.</li>
-<li>Ads: personalised ads only with your consent in Google's form; ads that are not personalised on the basis of our legitimate interest in funding the free game.</li>
+<li>Ads: personalised ads only with your consent in Google's form; ads that are not personalised on the basis of our legitimate interest in funding the free game. Google's check at start whether the form is needed: our legitimate interest in asking for consent where the law requires it.</li>
 <li>The Champions Pack: to give you what you bought (contract).</li>
 <li>Emails: to answer you (legitimate interest).</li>
 </ul>
